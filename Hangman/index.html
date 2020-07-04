@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootswatch Template -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Fontawesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="img/logo.png" />
+    <title>The Hangman Game</title>
+  </head>
+  <body class="bg-primary">
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary mb-3">
+      <div class="container">
+        <a href="#" class="navbar-brand"><h2>The Hangman Game</h2></a>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <p>Find the hidden word - Enter a letter</p>
+      <svg height="300" width="200" class="figure-container">
+        <!-- The Figure Rod -->
+        <line x1="60" y1="20" x2="140" y2="20"></line>
+        <line x1="140" y1="20" x2="140" y2="50"></line>
+        <line x1="60" y1="20" x2="60" y2="260"></line>
+        <line x1="20" y1="260" x2="100" y2="260"></line>
+
+        <!-- Figure Head -->
+        <circle cx="140" cy="70" r="20" class="figure-part"></circle>
+
+        <!-- Figure Body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part"></line>
+
+        <!-- Arms -->
+        <line x1="140" y1="120" x2="120" y2="100" class="figure-part"></line>
+        <line x1="140" y1="120" x2="160" y2="100" class="figure-part"></line>
+
+        <!-- Legs -->
+        <line x1="140" y1="150" x2="120" y2="180" class="figure-part"></line>
+        <line x1="140" y1="150" x2="160" y2="180" class="figure-part"></line>
+      </svg>
+
+      <div class="wrong-letters-container">
+        <div id="wrong-letters"></div>
+      </div>
+
+      <div class="word" id="word"></div>
+    </div>
+
+    <!-- Container for final messages -->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-message"></h2>
+        <button class="btn btn-primary btn-lg" id="play-button">
+          Play Again
+        </button>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-container" id="notification-container">
+      <p>You have already entered this letter</p>
+    </div>
+
+    <footer
+      class="container-fluid fixed-bottom mt-5 p-3 text-center bg-primary"
+      style="font-size: 25px;"
+    >
+      <strong
+        ><i class="fa fa-code" style="margin-right: 5px;"> </i> with
+        <i
+          class="fa fa-heart"
+          style="margin-right: 5px; margin-left: 5px; color: red;"
+        >
+        </i>
+        by Raksha Pawar</strong
+      >
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
